@@ -1,0 +1,18 @@
+<configuration>
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%-15thread] %-5level %-40logger{40} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Детальные логи для тестов -->
+    <logger name="steps" level="DEBUG"/>
+    <logger name="pages" level="DEBUG"/>
+    <logger name="com.codeborne.selenide" level="INFO"/>
+    <logger name="io.rest-assured" level="INFO"/>
+    <logger name="org.wiremock" level="WARN"/>
+
+    <root level="INFO">
+        <appender-ref ref="STDOUT" />
+    </root>
+</configuration>
